@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#imdb-logo{
+    height: 50px;
+    width: 100px;
+}
+
+.nav-menu{
+    font-size: 20px;
+}
