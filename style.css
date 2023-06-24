@@ -12,3 +12,51 @@ body{
 .nav-menu{
     font-size: 20px;
 }
+
+main{
+    padding-top: 20vh;
+}
+
+.d-flex{
+    /* justify-content: center; */
+    margin-left: 27.4vw;
+}
+
+#search-bar{
+    width: 40vw;
+}
+
+
+.dropdown-content {
+    margin-left: 27.4vw;
+    background-color: black;
+    width:40vw ;
+    z-index: 1;
+}
+  
+.dropdown-content div{
+    display: flex;
+    /* min-width: 40vw; */
+}
+  /* Links inside the dropdown */
+.dropdown-content div a {
+    width: 40vw;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+.favourites{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    width: 5vw;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}

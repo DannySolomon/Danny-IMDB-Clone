@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+#imdb-logo{
+    height: 50px;
+    width: 100px;
+}
+
+.nav-menu{
+    font-size: 20px;
+}
+
+#top{
+    display: flex;
+    justify-content: space-between;
+}
+
+#poster-title-year{
+    display: flex;
+}
+
+#movie-image{
+    width: 200px;
+    height: 300px;
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+#title-year{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#movie-title{
+    margin-top: 40px;
+    font-size: 58px;
+}
+
+#movie-year{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+#Favourites-button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#addFav{
+    width: 200px;
+}
