@@ -28,7 +28,8 @@ async function searchApi(){
             for(let i = 0 ;i < resjson.Search.length; i++){
 
                 let favarray = localStorage.getItem('favourites');
-                favourites = JSON.parse(favarray);
+                //favourites = JSON.parse(favarray);
+                favourites = favarray ? JSON.parse(favarray) : [];
 
                 const div = document.createElement('div');
 
