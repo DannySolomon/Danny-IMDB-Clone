@@ -33,9 +33,11 @@ async function searchApi(){
                 const div = document.createElement('div');
 
                 let temp = false;
-                for(let j = 0; j < favourites.length; j++){
-                    if(resjson.Search[i].Title == favourites[j].title && resjson.Search[i].Year == favourites[j].year){
-                        temp = true;
+                if(favourites != null){
+                    for(let j = 0; j < favourites.length; j++){
+                        if(resjson.Search[i].Title == favourites[j].title && resjson.Search[i].Year == favourites[j].year){
+                            temp = true;
+                        }
                     }
                 }
 
