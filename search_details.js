@@ -9,14 +9,14 @@ async function getmovie(){
     favContainer.innerHTML = '';
 
     //get search item from params
-    let res = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&s=${search_text}&page=1`);
+    let res = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&s=${search_text}&page=1`);
     let resjsonmain = await res.json();
     if(resjsonmain.Response == 'True')
     {
         let search_items = resjsonmain.Search;
         for(let i = 0; i< search_items.length; i++){
 
-            let movieapi = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${search_items[i].Title}&y=${search_items[i].Year}`);
+            let movieapi = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${search_items[i].Title}&y=${search_items[i].Year}`);
             let resjson = await movieapi.json();
 
             if(resjson.Response != 'False'){

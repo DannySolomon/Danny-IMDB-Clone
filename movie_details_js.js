@@ -15,7 +15,7 @@ let fav_button = document.getElementById('addFav');
 getmovie();
 
 async function getmovie(){
-    let movieapi = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${imdb_title}&y=${imdb_year}&plot=full`);
+    let movieapi = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${imdb_title}&y=${imdb_year}&plot=full`);
     let resjson = await movieapi.json();
     console.log(resjson);
 

@@ -12,7 +12,7 @@ async function getmovie(){
 
     for(let i = 0; i< favourites.length; i++){
 
-        let movieapi = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${favourites[i].title}&y=${favourites[i].year}`);
+        let movieapi = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${favourites[i].title}&y=${favourites[i].year}`);
         let resjson = await movieapi.json();
 
         const div = document.createElement('div');

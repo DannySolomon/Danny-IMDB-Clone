@@ -21,7 +21,7 @@ async function searchApi(){
     let dropdown = document.getElementById('dropdown');
     dropdown.innerHTML = '';
     if(typed_text != ''){
-        let res = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&s=${typed_text}&page=1`);
+        let res = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&s=${typed_text}&page=1`);
         let resjson = await res.json();
         if(resjson.Response == 'True')
         {
