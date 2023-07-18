@@ -42,9 +42,35 @@ body{
     font-size: 58px;
 }
 
+#movie-title-rating-runtime{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center;     */
+}
+
+#movie-year-rating{
+    display: flex;
+}
+
 #movie-year{
     font-size: 30px;
     margin-bottom: 40px;
+    margin-right: 30px;
+}
+
+#movie-rating{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#rating{
+    padding: 5px;
+}
+
+#movie-runtime{
+    color: grey;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 #Favourites-button-container{
@@ -55,4 +81,9 @@ body{
 
 #addFav{
     width: 200px;
+}
+
+
+.container{
+    margin-left: 30px;
 }

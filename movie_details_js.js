@@ -15,8 +15,9 @@ let fav_button = document.getElementById('addFav');
 getmovie();
 
 async function getmovie(){
-    let movieapi = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${imdb_title}&y=${imdb_year}`);
+    let movieapi = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8456bf09&t=${imdb_title}&y=${imdb_year}&plot=full`);
     let resjson = await movieapi.json();
+    console.log(resjson);
 
     for(let i = 0; i < favourites.length; i++){
         if(imdb_title == favourites[i].title && imdb_year == favourites[i].year){
@@ -32,6 +33,18 @@ async function getmovie(){
 
     //add Year
     addYear(resjson);
+
+    //add Plot
+    addPlot(resjson);
+
+    //add Runtime
+    addRuntime(resjson);
+
+    //add Rating
+    addRating(resjson);
+
+    //add Actors
+    addActors(resjson);
 }
 
 function addPoster(res){
@@ -48,6 +61,26 @@ function addTitle(res){
 function addYear(res){
     let movie_year = document.getElementById('movie-year');
     movie_year.innerHTML = res.Year;
+}
+
+function addPlot(res){
+    let movie_plot = document.getElementById('plot-details');
+    movie_plot.innerHTML = res.Plot;
+}
+
+function addRuntime(res){
+    let movie_runtime = document.getElementById('runtime');
+    movie_runtime.innerHTML = res.Runtime;
+}
+
+function addRating(res){
+    let movie_rating = document.getElementById('rating');
+    movie_rating.innerHTML = res.imdbRating;
+}
+
+function addActors(res){
+    let movie_actors = document.getElementById('actor-details');
+    movie_actors.innerHTML = res.Actors;
 }
 
 fav_button.addEventListener('click',function(event){
