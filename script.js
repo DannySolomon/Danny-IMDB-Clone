@@ -1,9 +1,20 @@
 let search_bar = document.getElementById('search-bar');
+let search_button = document.getElementById('search-button');
 
 let favourites = [];
 // localStorage.setItem('favourites', JSON.stringify(favourites));
 
 search_bar.addEventListener('input',searchApi);
+search_button.addEventListener('click',searchPage);
+
+async function searchPage(e){
+    e.preventDefault(); // to prevent page from reloading
+    let typed_text = search_bar.value;
+
+    if(typed_text != ''){
+        window.location.href = `search_details.html?search=${typed_text}`;
+    }
+}
 
 async function searchApi(){
     let typed_text = search_bar.value;
@@ -28,7 +39,7 @@ async function searchApi(){
                     }
                 }
 
-                console.log(resjson.Search[i].Title);
+                //console.log(resjson.Search[i].Title);
 
                 if(temp == false){
                     div.innerHTML = `<a href="movie_details.html?mtitle=${resjson.Search[i].Title}&year=${resjson.Search[i].Year}">${resjson.Search[i].Title}</a>
